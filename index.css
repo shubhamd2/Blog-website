@@ -1,0 +1,114 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.main-title {
+    font-size: 72px;
+    font-weight: bold;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+
+/* Toggle button styles */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 25px;
+    background-color: #000;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+body.light-mode .toggle-container {
+    background-color: #ccc;
+}
+
+.toggle-circle {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.5px;
+    left: 3px;
+    transition: left 0.3s ease;
+}
+
+.toggle-container.dark-mode .toggle-circle {
+    left: 25px;
+}
+
+/* Toggle button styles end */
+
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--footer-bg-light);
+    color: var(--footer-text-light);
+}
+
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+/* Dark mod styles end */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+/* Footer styles */
+.pagination a {
+    text-decoration: none;
+    margin: 0 0.5rem;
+    color: #007bff;
+}
+
+footer {
+    background: white;
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+}
+
+/* Footer styles end */
+
+/* Responsive atyles  */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .footer {
+        background-color: var(--footer-bg-dark);
+        color: var(--footer-text-dark);
+    }
+}
+
+/* Responsive styles end */

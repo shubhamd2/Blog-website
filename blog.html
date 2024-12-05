@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog with Dark Mode</title>
+  <link rel="stylesheet" href="style.css">
+  
+  
+</head>
+<body class="light-mode">
+  <!-- Header -->
+  <header>
+    <div>SHUBHAM DEWASI</div>
+    <div class="nav-links">
+      <a href="#">Blog</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+      <a href="#">Newsletter</a>
+    </div>
+    <div class="toggle-container" id="themeToggle">
+      <div class="toggle-circle"></div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="main-title">The Blog</div>
+    <section class="recent-posts">
+        <h2>Recent Blog Posts</h2>
+        <div class="posts-grid">
+            <article>
+                <img src="./assets/Image.svg" alt="UX review presentations">
+                <h3>UX review presentations</h3>
+                <p>How do you create compelling presentations that wow your colleagues and impress managers?</p>
+                <button class="button">Design</button>
+
+            </article>
+            <article>
+                <img src="placeholder.jpg" alt="Migrating to Linear 101">
+                <h3>Migrating to Linear 101</h3>
+                <p>Linear helps streamline software projects, sprints, bugs, and tracking.</p>
+                <span class="button">Design, Research</span>
+            </article>
+            <article>
+                <img src="placeholder.jpg" alt="Building your API stack">
+                <h3>Building your API stack</h3>
+                <p>The role of REST APIs has evolved for creating, releasing, and managing products.</p>
+                <span class="tags">API, Development</span>
+            </article>
+        </div>
+    </section>
+    <section class="all-posts">
+        <h2>All Blog Posts</h2>
+        <div class="posts-grid">
+            <article>
+                <img src="placeholder.jpg" alt="Leadership lessons">
+                <h3>Bill Walsh leadership lessons</h3>
+                <span class="tags">Leadership, Management</span>
+            </article>
+            <article>
+                <img src="placeholder.jpg" alt="PM mental models">
+                <h3>PM mental models</h3>
+                <span class="tags">Process, Research</span>
+            </article>
+            <article>
+                <img src="placeholder.jpg" alt="What is Wireframing?">
+                <h3>What is Wireframing?</h3>
+                <span class="tags">Design, Research</span>
+            </article>
+        </div>
+    </section>
+    <nav class="pagination">
+        <a href="#">Previous</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">Next</a>
+    </nav>
+</main>
+<footer>
+    <p>&copy; 2023 Twitter | LinkedIn | Email | RSS Feed | Add to Feedly</p>
+</footer>
+  </main>
+
+  <script>
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
+      themeToggle.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
